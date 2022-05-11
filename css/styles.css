@@ -1,24 +1,21 @@
 /*======================= FONT =================*/
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
 /*======================= VARIABLES CSS =================*/
 
 :root {
     --margin-height: 1.5rem;
 
     /*--------color-----------*/
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --desaturated-dark-blue: hsl(214, 17%, 51%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --light-grayish-glue: hsl(210, 46%, 95%);
 
-    --orange-color: hsl(25, 97%, 53%);
-    --white: hsl(0, 0%, 100%);
-    --light-grey: hsl(217, 12%, 63%);
-    --medium-grey: hsl(216, 12%, 54%);
-    --medium-dark-blue: hsl(213, 11%, 32%);
-    --dark-blue: hsl(212, 23%, 22%);
-    --very-dark-blue: hsl(216, 12%, 8%);
     /* --content-color:; */
 
 
     /*--------font and typography-----------*/
-    --body-font: 'Overpass', sans-serif;
+    --body-font: 'Manrope', sans-serif;
 
     --biggest-font-size: 1.5rem;
     --h1-font-size: 1.5rem;
@@ -29,7 +26,7 @@
     --smaller-font-size: .75rem;
 
     /*--------font weight-----------*/
-    --font-medium: 400;
+    --font-medium: 500;
     --font-semi-bold: 700;
 
     /*-------- Margenes bottom-----------*/
@@ -46,7 +43,7 @@
     --z-fixed: 100;
 
     /*--------shadow-----------*/
-    /* --shadow: rgba(43, 0, 233, 0.2) 0px 8px 24px; */
+    --shadow: var(--grayish-blue) 0px 8px 24px;
     ;
 
     /* 
@@ -83,7 +80,7 @@
 
 htm {
     scroll-behavior: smooth;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 body,
@@ -95,6 +92,7 @@ button input {
 body {
     margin: var(--margin-height) 0 0 0;
     color: var(--white);
+    background: var(--light-grayish-glue)
 }
 
 h1,
@@ -119,7 +117,7 @@ a {
 }
 
 img {
-    max-width: 100%;
+    width: 10%;
     height: auto;
 }
 
@@ -169,16 +167,23 @@ button {
 }
 
 /*======================= ELEMENT =================*/
-body {
-    background-color: var(--very-dark-blue)
-}
 
 p {
-    margin-bottom: var(--mb-2);
+    color: var(--grayish-blue);
     line-height: 1.4rem;
     letter-spacing: 0px;
     word-spacing: 1px;
 }
+
+h2 {
+    color: var(--very-dark-grayish-blue);
+    line-height: 1.8rem;
+    font-size: 1.3rem;
+    word-spacing: .1rem;
+    margin-bottom: 1.8rem;
+}
+
+/*
 
 form {
     display: flex;
@@ -233,14 +238,74 @@ input[type="radio"]:checked+label {
 input[type="radio"]:hover+label {
     background-color: var(--orange-color);
     color: var(--white);
-}
+} */
 
 /*======================= COMPONENT =================*/
 
 .card {
-    background: var(--dark-blue);
+    background: white;
+    box-shadow: var(--shadow);
+    max-width: 70%;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    display: flex;
+}
+
+.card-img {
+    width: 116%;
+}
+
+.card-img>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem 0 0 2rem;
+    -webkit-border-radius: 2rem 0 0 2rem;
+    -moz-border-radius: 2rem 0 0 2rem;
+    -ms-border-radius: 2rem 0 0 2rem;
+    -o-border-radius: 2rem 0 0 2rem;
+}
+
+.card-container {
     padding: 2rem;
-    max-width: 18%;
+}
+
+.card-footer {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-user {
+    display: flex;
+}
+
+.card-user>img {
+    width: 50px;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    margin-right: 1rem;
+}
+
+.card-name_user {
+    color: var(--very-dark-grayish-blue);
+    font-weight: var(--font-semi-bold);
+}
+
+.card-date {
+    margin-top: .4rem;
+}
+
+.card-share {
+    background: var(--light-grayish-glue);
+    width: 50px;
+    padding: 1rem;
     border-radius: 2rem;
     -webkit-border-radius: 2rem;
     -moz-border-radius: 2rem;
@@ -248,6 +313,11 @@ input[type="radio"]:hover+label {
     -o-border-radius: 2rem;
 }
 
+.card-share>img {
+    width: 100%;
+}
+
+/*
 .card-content {
     display: flex;
     flex-direction: column;
@@ -288,10 +358,10 @@ input[type="radio"]:hover+label {
 .tab-selectied>p {
     color: var(--orange-color);
     margin: 0;
-}
+} */
 
 /*======================= MOBILE =================*/
-@media (max-width: 1440px) {
+/* @media (max-width: 1440px) {
 
     .card {
         max-width: 30%;
@@ -366,4 +436,4 @@ input[type="radio"]:hover+label {
     button {
         font-size: 12px;
     }
-}
+} */
