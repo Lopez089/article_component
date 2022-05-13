@@ -303,6 +303,7 @@ input[type="radio"]:hover+label {
 }
 
 .card-share {
+    position: relative;
     background: var(--light-grayish-glue);
     width: 50px;
     padding: 1rem;
@@ -319,6 +320,7 @@ input[type="radio"]:hover+label {
 
 .card-tooltip {
     position: absolute;
+    width: max-content;
     background: var(--very-dark-grayish-blue);
     display: flex;
     padding: .5rem 1.5rem;
@@ -328,8 +330,9 @@ input[type="radio"]:hover+label {
     -ms-border-radius: .5rem;
     -o-border-radius: .5rem;
     gap: .8rem;
-    left: 488px;
-    bottom: 125px;
+    z-index: 1;
+    left: -104%;
+    bottom: 74px;
 }
 
 .card-tooltip>p {
