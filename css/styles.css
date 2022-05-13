@@ -314,12 +314,17 @@ input[type="radio"]:hover+label {
     -o-border-radius: 2rem;
 }
 
+.card-share:hover {
+    background: var(--very-dark-grayish-blue);
+}
+
 .card-share>img {
     width: 100%;
 }
 
 .card-tooltip {
     position: absolute;
+    visibility: hidden;
     width: max-content;
     background: var(--very-dark-grayish-blue);
     display: flex;
